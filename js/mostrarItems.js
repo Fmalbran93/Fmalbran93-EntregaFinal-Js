@@ -1,4 +1,4 @@
-const showCard = data => {
+const MostrarCard = data => {
     data.forEach(product => {
         cardTemplate.querySelector('h5').textContent = product.title
         cardTemplate.querySelector('p').textContent = product.precio

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dataFetch();
     if(localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
-        showCart()
+        MostrarCarro()
     } 
 })
 
@@ -11,7 +11,7 @@ const dataFetch = async () => {
         const res = await fetch('/js/database.json')
         const data = await res.json()
         // console.log(data);
-        showCard(data);
+        MostrarCard(data);
     } catch (error) {
         console.log(error);
     }
