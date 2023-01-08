@@ -13,7 +13,7 @@ const dataFetch = async () => {
         // console.log(data);
         MostrarCard(data);
     } catch (error) {
-        console.log(error);
+       
     }
 }
 
