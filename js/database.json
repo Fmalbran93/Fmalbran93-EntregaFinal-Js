@@ -5,41 +5,41 @@
         "id": 1,
         "title": "BURGER YANKI",
         "category": "Hamburguesas",
-        "image": "../images/burger-2.jpg"
+        "image": "./images/burger-2.jpg"
     },
     {
         "precio": 1750,
         "id": 2,
         "title": "BURGER DE BARRIO",
         "category": "Hamburguesas",
-        "image": "/images/cheesse.jpg"
+        "image": "./images/cheesse.jpg"
     },
     {
         "precio": 2100,
         "id": 3,
         "title": "PIZZA MARGARITA",
         "category": "Pizzas",
-        "image": "/images/pizza-menu2.jpg"
+        "image": "./images/pizza-menu2.jpg"
     },
     {
         "precio": 2000,
         "id": 4,
         "title": "PIZZA OLIVATA",
         "category": "Pizzas",
-        "image": "/images/pizza-menu.jpg"
+        "image": "./images/pizza-menu.jpg"
     },
     {
         "precio": 990,
         "id": 5,
         "title": "PAPAS DEL RIOBA",
         "category": "Papas",
-        "image": "/images/papasfritas.jpg"
+        "image": "./images/papasfritas.jpg"
     },
     {
         "precio": 850,
         "id": 6,
         "title": "PAPAS DE LA CASA",
         "category": "Papas",
-        "image": "/images/papasfritas1jpg.jpg"
+        "image": "./images/papasfritas1jpg.jpg"
     }
 ]
