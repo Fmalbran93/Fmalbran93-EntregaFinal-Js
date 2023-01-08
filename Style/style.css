@@ -1,0 +1,329 @@
+/* Colores- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap");
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+header .navbar {
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header .navbar .nav-item {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+header .navbar .nav-item .nav-link {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  background-color: #212428;
+}
+header .navbar .nav-item .nav-link:hover {
+  color: #3bcc75;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  color: #000;
+  scroll-behavior: smooth;
+}
+
+.hero-index {
+  padding: 3.9rem 0;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+/*Hero*/
+.hero-index {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(41, 40, 40, 0.39)), url("../images/DSC07095.jpg") center no-repeat;
+  background-size: cover;
+  color: Linear;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.banner-index {
+  width: 100%;
+  height: 60vh;
+  margin: 50px auto;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(41, 40, 40, 0.39)), url("../images/restaurant-Barra.jpg") center no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.banner-index2 {
+  width: 100%;
+  height: 60vh;
+  margin: 50px auto;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(41, 40, 40, 0.39)), url("../images/mesa-hambu.jpg") center no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.fil {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.head {
+  color: #fff;
+  font-size: 3.7rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+}
+
+.circle {
+  font-size: 1.5rem;
+  color: #3bcc75;
+  margin: 0 1.6rem;
+}
+
+.he-des h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 150;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+}
+
+.he-des h5 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  margin: auto;
+}
+
+.cta-btn {
+  font-size: 1.1rem;
+  background-color: #f7aa03;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  border-radius: 0.4rem;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  color: #fff;
+  background-color: #3bcc75;
+}
+
+.global {
+  justify-content: center;
+  text-align: center;
+}
+
+.dis-sto .global {
+  margin-top: 6.9rem;
+}
+
+.global .circle {
+  color: #3bcc75;
+  margin: 2.4rem 0;
+}
+
+.global .h1-sub {
+  letter-spacing: -1px;
+  line-height: 0.42;
+  margin-top: 10px;
+}
+
+.res-info {
+  text-align: center;
+}
+
+.res-des {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.res-des p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.card {
+  margin: 50px auto;
+  width: 70%;
+}
+
+/* CONTACTOS */
+.form-horizontal {
+  box-shadow: 0 20px 32px 0 rgba(0, 0, 0, 0.5), 0 20px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.img-group-events {
+  display: block;
+}
+
+legend {
+  margin: 8px;
+}
+
+label {
+  margin: 2px;
+  padding: 0px;
+  font-size: 1.2rem;
+}
+
+option {
+  font-size: 1.1rem;
+}
+
+select {
+  margin: 2px;
+  padding: 0px;
+}
+
+/* Nosotros */
+.card figure video {
+  filter: blur(3px);
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.card figure:hover video {
+  filter: blur(0);
+  transform: scale(1.3);
+}
+
+video {
+  width: 80%;
+}
+
+.tz-gallery {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.tz-gallery .lightbox img {
+  width: 100%;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.tz-gallery .lightbox img:hover {
+  transform: scale(1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tz-gallery .lightbox {
+  border: 3px solid #3bcc75;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.hea-dark {
+  color: #252525;
+  letter-spacing: 0.7rem;
+  margin-right: -0.7rem;
+}
+
+.h1-sub {
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  color: #3bcc75;
+  font-weight: 600;
+  line-height: 0.4;
+}
+
+/*footer*/
+footer {
+  padding: 7.9rem 0;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.social-icons {
+  list-style: none;
+  margin-bottom: 5.4rem;
+  display: flex;
+  justify-content: center;
+}
+.social-icons i {
+  font-size: 2rem;
+  color: #3bcc75;
+  padding: 0.8rem 2rem;
+}
+.social-icons i:focus {
+  color: #f7aa03;
+}
+.social-icons i:hover {
+  color: #f7aa03;
+}
+
+.iframe {
+  justify-content: center;
+}
+
+.submit {
+  border-radius: 5px;
+  border-color: transparent;
+}/*# sourceMappingURL=style.css.map */

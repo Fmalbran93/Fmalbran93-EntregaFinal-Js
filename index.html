@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"/>
+    </link>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+    <link rel="stylesheet" href="./Style/style.css" />
+    <script src="https://kit.fontawesome.com/dbdf27892a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand px-4" href="#"> <img src="./images/logocoche.png" alt="logo" width="120" height="30"></a>
+          <button class="btn btn-secondary dropdown-toggle d-lg-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Filtro
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item filter" category="all" id="filterAll">Todos</a></li>
+            <li><a class="dropdown-item filter" category="Hamburguesas" id="filterHamburguesas">Hamburguesas</a></li>
+            <li><a class="dropdown-item filter" category="Pizzas" id="filterPizzas">Pizzas</a></li>
+            <li><a class="dropdown-item filter" category="Papas" id="filterPapas">Papas</a></li>
+          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>             
+              <li class="nav-item">
+                <a class="nav-link linkProduct" href="#productos" >Productos</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filtro
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item filter" category="all" id="filterAll">Todos</a></li>
+                    <li><a class="dropdown-item filter" category="Hamburguesas" id="filterHamburguesas">Hamburguesas</a></li>
+                    <li><a class="dropdown-item filter" category="Pizzas" id="filterPizzas">Pizzas</a></li>
+                    <li><a class="dropdown-item filter" category="Papas" id="filterPapas">Papas</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="numeroItems">0</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <!--Inicio seccion1-->
+  <section class="row">
+    <section class="col-lg-12">
+      <section class="banner-index2" id="hero">
+        <div class="container">
+          <h1 class="h1-sub"><span class="fil">P</span>edi!</h1>
+          <h2 class="head">Para llevar y comer en casa!</h2>
+          <div class="he-des">
+            <h3>Veni y sentite en casa</h3>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+  
+  <!-- -------------------- MODAL -------------------------------- -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody id="items"></tbody>
+            <tfoot>
+              <tr id="footer">
+                <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ---------------------- FIN MODAL -------------------------- -->
+  <!-- ---------------------- MODAL 2 -------------------------- -->
+  <div class="modal fade" id="exampleModal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Confirmacion de compra</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+          <div class="form-floating mb-3">
+            <input type="email" required class="form-control" id="floatingEmail" placeholder="email@ejemplo.com">
+            <label for="floatingInput">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" required class="form-control" id="floatingName" placeholder="Nombre y Apellido">
+            <label for="floatingName">Nombre</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" required class="form-control" id="floatingAddress" placeholder="Direccion">
+            <label for="floatingAddress">Direccion</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="number" required class="form-control" id="floatingPhone" placeholder="Telefono">
+          <label for="floatingMobile">Telefono</label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-outline-success" id="buttonConfirm" data-bs-dismiss="modal">Confirmar</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- ---------------------- FIN MODAL 2 -------------------------- -->
+  <!-- CART MOBILE -->
+    <div class="cartMobile">
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="numeroItemsMobile">0</span>
+      </button>
+    </div>
+  <!-- FIN CART MOBILE -->
+  <div class="container">
+    <h2 class="h1-sub text-center" id="productos">Productos</h2>
+    <hr>
+    <div class="row" id="cards"></div>
+  </div>
+  <!-- INICIO FOOTER -->
+  <footer class="footer-area bg-f">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <h3>&copy; CocheraBar 2022</h3>
+          <p>Al usar nuestro contenido, productos y servicios, usted acepta nuestros Términos de servicio y Política de privacidad. 
+            Se prohíbe la reproducción total o parcial en cualquier forma o medio sin el permiso expreso por escrito de Affiliate Marketing Corp.
+            <br>
+            ¡No vendas mi información personal!
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3>Recibi noticias</h3>
+          <div class="subscribe_form">
+            <form class="subscribe_form">
+              <input name="EMAIL" id="subs-email" class="form_input" placeholder="Escibe tu Email" type="email">
+              <button type="submit" class="submit">Suscribite</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+          <ul class="social-icons">
+            <li>
+              <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://es-la.facebook.com/cocherabar/" target="_blank"> <i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="https://ar.pinterest.com/" target="_blank"> <i class="fab fa-pinterest"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="https://www.tripadvisor.com.ar/Restaurant_Review-g312768-d15514261-Reviews-Cochera_Birreria_de_barrio-Cordoba_Province_of_Cordoba_Central_Argentina.html" target="_blank"> <i class="fab fa-tripadvisor"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h1>Horarios de Atencion</h1>
+          <p><span class="text-color">Lunes :</span> Cerrado</p>
+          <p><span class="text-color">Mar/Mier/Dom </span>18:00Pm - 02:00Am</p>
+          <p><span class="text-color">Jue/vie/Sab :</span> 18:00Pm - 05:00Am</p>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h3>Ubicanos</h3>
+          <iframe class="gmap_iframe" width="200px" height="200px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=215&amp;height=147&amp;hl=en&amp;q=mariano fragueiro 1562&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embedmapgenerator.com/"></a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:147px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:147px;}.gmap_iframe {height:147px!important;}</style>
+        </div>
+      </div>
+  </footer>
+  <!-- FIN FOOTER -->
+
+
+  <!-- ********** TEMPLATES ************** -->
+
+
+  <template id="template-footer">
+    <th scope="row" colspan="2">Total productos</th>
+    <td class="total-products">10</td>
+    <td>
+      <button class="btn btn-outline-danger btn-sm" id="vaciar-carrito">
+        Vaciar
+      </button>
+    </td>
+    <td class="font-weight-bold">$ <span>5000</span></td>
+  </template>
+
+  <template id="template-carrito">
+    <tr>
+      <th scope="row">id</th>
+      <td class="title">"Café"</td>
+      <td class="quantity">1</td>
+      <td>
+        <button class="btn btn-outline-success btn-sm Sumar">
+          +
+        </button>
+        <button class="btn btn-outline-danger btn-sm restar">
+          -
+        </button>
+      </td>
+      <td>$ <span>500</span></td>
+    </tr>
+  </template>
+
+
+  <template id="template-card">
+    <div class="cardContainer col-lg-4 col-md-6 col-sm-12 mb-2">
+      <div class="card">
+        <img src="" alt="" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h5>Titulo</h5>
+          <p><span>$</span>Precio</p>
+          <button class="btn cta-btn me-auto ms-auto buttonComprar">Agregar al Carrito</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/generalVariables.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/mostrarItems.js"></script>
+  <script src="js/agregarCarrito.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+
+</html>

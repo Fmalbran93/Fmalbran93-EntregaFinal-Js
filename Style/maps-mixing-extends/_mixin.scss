@@ -1,0 +1,6 @@
+@mixin flex($dis, $text-dir) {
+    display: $dis;
+    text-align: $text-dir;
+    
+}
+

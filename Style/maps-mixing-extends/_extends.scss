@@ -1,0 +1,24 @@
+%titulo-oscuro {
+    color: #252525;
+    letter-spacing: .7rem;
+    margin-right: -.7rem;
+}
+
+%titulo-claro {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    color: #3bcc75;
+    font-weight: 600;
+    line-height: .4;
+}
+
+
+.h1-sub{
+    @extend %titulo-claro;
+}
+
+
+.hea-dark {
+    @extend %titulo-oscuro;
+}
+

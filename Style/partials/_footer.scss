@@ -1,0 +1,38 @@
+/*footer*/
+footer {
+  padding: 7.9rem 0;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.social-icons {
+  list-style: none;
+  margin-bottom: 5.4rem;
+  display: flex;
+  justify-content: center;
+   i {
+    font-size: 2rem;
+    color: map-get($Color-botones, Color-secondary);
+    padding: 0.8rem 2rem;
+    &:focus{
+        color: map-get($Color-botones, color-primary);
+      }
+    &:hover{
+      color: map-get($Color-botones, color-primary);
+    }
+  }
+}
+
+
+.iframe {
+  justify-content: center;
+}
+
+.submit {
+  border-radius: 5px;
+  border-color: transparent;
+}
